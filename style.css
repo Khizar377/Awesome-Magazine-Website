@@ -1,0 +1,147 @@
+* {
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 20px;
+    align-items: center;
+    border: 2px solid #d3d3d3;
+}
+
+header div {
+    position: relative;
+}
+
+header #menu-icon {
+    display: none;
+}
+
+header div i {
+    position: absolute;
+    right: 20px;
+}
+
+header ul {
+    gap: 20px;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+main div {
+    width: 25%;
+    
+    
+}
+
+main div .banners {
+    width: 100%;
+    border-right: 2px solid white;
+}
+.paras-div {
+    width: 100%;
+     padding: 5px 15px;
+     text-align: center;
+}
+.navbar {
+    width: 1200px;
+    margin: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+li i {
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid #cfcdda;
+}
+
+@media (max-width:1520px) {
+    main div {
+       width:  400px;
+}
+}
+
+@media (max-width:1220px) {
+    main {
+        flex-wrap: wrap;
+    }
+    /* main div {
+        width: ;
+    } */
+    .navbar {
+        width: 100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:992px) {
+
+    header>div,
+    header>ul {
+        display: none;
+    }
+
+    header>#menu-icon {
+        font-size: 3rem;
+        display: block;
+        color: #130c3e;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 15%;
+        right: 0;
+        width: 100%;
+        padding: 0.5rem 3rem;
+        background-color: white;
+        border-bottom: 2px solid #130c3e;
+        display: none;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1rem;
+        margin: 1rem 0;
+        color: #130c3e;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+}
+
+@media (max-width:620px) {
+    .navbar {
+        top: 12%;
+    }
+
+    header>#menu-icon {
+        font-size: 2rem;
+    }
+
+    header>img {
+        width: 65%;
+        height: 50px;
+    }
+}
+
+@media (max-width:400px) {
+    main div {
+        width: 90%;
+    }
+}
