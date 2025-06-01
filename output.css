@@ -8,10 +8,9 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-bold: 700;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -162,6 +161,9 @@
   }
 }
 @layer utilities {
+  .end-1 {
+    inset-inline-end: calc(var(--spacing) * 1);
+  }
   .end-10 {
     inset-inline-end: calc(var(--spacing) * 10);
   }
@@ -170,6 +172,9 @@
   }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-3\.5 {
+    margin-top: calc(var(--spacing) * 3.5);
   }
   .ml-1 {
     margin-left: calc(var(--spacing) * 1);
@@ -214,10 +219,6 @@
   .border-\[lightgrey\] {
     border-color: lightgrey;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -225,20 +226,24 @@
   .text-\[18px\] {
     font-size: 18px;
   }
-  .text-\[\#3B4855\] {
-    color: #3B4855;
+  .text-\[20px\] {
+    font-size: 20px;
+  }
+  .text-\[35px\] {
+    font-size: 35px;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-\[\#191c35\] {
+    color: #191c35;
   }
   .text-\[\#191d34\] {
     color: #191d34;
   }
   .text-\[\#707B83\] {
     color: #707B83;
-  }
-  .text-\[\#a9abaf\] {
-    color: #a9abaf;
-  }
-  .text-\[\#babfc9\] {
-    color: #babfc9;
   }
   .underline {
     text-decoration-line: underline;
@@ -273,6 +278,10 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -287,6 +296,7 @@
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-font-weight: initial;
       --tw-outline-style: solid;
     }
   }
