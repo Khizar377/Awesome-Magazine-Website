@@ -29,24 +29,37 @@ header ul {
 
 main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 main div {
     width: 25%;
-    
-    
 }
 
 main div .banners {
     width: 100%;
     border-right: 2px solid white;
 }
+
 .paras-div {
     width: 100%;
-     padding: 5px 15px;
+     padding: 22px 29px 32px 17px;
      text-align: center;
 }
+
+.paras-div:hover {
+    box-shadow: -2px 2px 12px lightgray;
+}
+
+.first-p {
+    font-weight: 400;
+}
+
+.second-p {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
 .navbar {
     width: 1200px;
     margin: auto;
@@ -60,11 +73,28 @@ main div .banners {
     text-decoration: underline;
 }
 
-
-li i {
-    padding: 10px;
-    border-radius: 50px;
+.rotate1 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     border: 1px solid #cfcdda;
+}
+
+@keyframes rotateLeftToRight {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(0180deg);
+  }
+}
+
+li i:hover {
+  animation: rotateLeftToRight 0.6s linear ;
+  transform-origin: center; 
 }
 
 @media (max-width:1520px) {
@@ -77,9 +107,6 @@ li i {
     main {
         flex-wrap: wrap;
     }
-    /* main div {
-        width: ;
-    } */
     .navbar {
         width: 100%;
     }
@@ -90,7 +117,9 @@ li i {
 }
 
 @media (max-width:992px) {
-
+    main {
+        row-gap: 20px;
+    }
     header>div,
     header>ul {
         display: none;
@@ -141,6 +170,7 @@ li i {
 }
 
 @media (max-width:400px) {
+    
     main div {
         width: 90%;
     }
